@@ -14,5 +14,11 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+    	<groupId>fwk-catuy-core</groupId>
+    	<artifactId>fwk-catuy-core</artifactId>
+    	<version>0.0.1-SNAPSHOT</version>
+    	<type>pom</type>
+    </dependency>
   </dependencies>
 </project>
