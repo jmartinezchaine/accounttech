@@ -1,5 +1,7 @@
 package com.soup.accounttech.repository.model.business;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -17,7 +19,7 @@ public class AccountingSystem extends AbstractHibernateEntity<Long> {
 
 	
     private Long id;
-	private ParserMetadata metadata;
+	private List<ParserMetadata> metadata;
 	
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -32,12 +34,11 @@ public class AccountingSystem extends AbstractHibernateEntity<Long> {
         this.id = id;
     }
     
-    public ParserMetadata getMetadata() {
+    public List<ParserMetadata> getMetadata() {
 		return metadata;
 	}
     
-    public void setMetadata(ParserMetadata metadata) {
+    public void setMetadata(List<ParserMetadata> metadata) {
 		this.metadata = metadata;
 	}
-	
 }
