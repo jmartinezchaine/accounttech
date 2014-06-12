@@ -11,7 +11,7 @@ import org.hibernate.annotations.Entity;
 import com.soup.accounttech.repository.model.generic.AbstractHibernateEntity;
 
 @Entity
-@Table(name = "ACCOUNT_TYPE")
+@Table(name = "RD_ACCOUNT_TYPE")
 public class AccountType extends AbstractHibernateEntity<Long>{
 
 	@Id

@@ -12,11 +12,13 @@ import com.soup.accounttech.repository.model.generic.AbstractHibernateEntity;
 import com.soup.accounttech.repository.model.metadata.ParserMetadata;
 
 @Entity
-@Table(name = "ACCOUNTING_SYSTEM")
-public class AccountingSystem extends AbstractHibernateEntity<Long> {
+@Table(name = "RD_BANK_ACCOUNT")
+public class Bank extends AbstractHibernateEntity<Long> {
 
+	private Long id;
+	private String name;
+	private String code;
 	
-    private Long id;
 	private ParserMetadata metadata;
 	
 	@Id
@@ -31,13 +33,29 @@ public class AccountingSystem extends AbstractHibernateEntity<Long> {
     public void setId(Long id) {
         this.id = id;
     }
-    
-    public ParserMetadata getMetadata() {
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getCode() {
+		return code;
+	}
+
+	public void setCode(String code) {
+		this.code = code;
+	}
+
+	public ParserMetadata getMetadata() {
 		return metadata;
 	}
-    
-    public void setMetadata(ParserMetadata metadata) {
+
+	public void setMetadata(ParserMetadata metadata) {
 		this.metadata = metadata;
 	}
-	
+    
 }

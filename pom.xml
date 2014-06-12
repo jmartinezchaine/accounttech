@@ -12,6 +12,7 @@
 	<modules>
 		<module>accounttech-commons</module>
 		<module>accounttech-repository</module>
+		<module>accounttech-core</module>
 	</modules>
 
 	<dependencies>

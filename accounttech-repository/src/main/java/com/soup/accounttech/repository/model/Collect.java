@@ -1,5 +1,8 @@
 package com.soup.accounttech.repository.model;
 
+import java.math.BigDecimal;
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -8,6 +11,7 @@ import javax.persistence.Table;
 
 import org.hibernate.annotations.Entity;
 
+import com.soup.accounttech.repository.model.business.Currency;
 import com.soup.accounttech.repository.model.generic.AbstractHibernateEntity;
 
 @Entity
@@ -18,6 +22,9 @@ public class Collect  extends AbstractHibernateEntity<Long>{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID", nullable = false)
     private Long id;
+	private BigDecimal amount;
+	private Currency currency;
+	private Date date;
 	
 	@Override
     public Long getId() {

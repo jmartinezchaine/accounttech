@@ -14,11 +14,11 @@ import com.soup.accounttech.repository.model.generic.AbstractHibernateEntity;
 @Table(name = "BANK_RECONCILIATION_RESULT")
 public class ReconciliationResult  extends AbstractHibernateEntity<Long>{
 
-	@Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID", nullable = false)
     private Long id;
 	
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "ID", nullable = false)
 	@Override
     public Long getId() {
         return this.id;
